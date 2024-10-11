@@ -1,7 +1,8 @@
 fn main() {
     let x: i32 = 5;
-    let y: i32;
+    let y: i32 = x;
 
-    assert_eq!(x, 5);
+    let y: i32  = 10;
+
     println!("Success!");
 }
