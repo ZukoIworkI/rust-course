@@ -1,4 +1,5 @@
-#[test]fn main() {
+#[test]
+fn main() {
     let n = 5;
     for i in 0..n {        for _ in 0..(n - i - 1) {
         print!(" ");        }
