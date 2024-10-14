@@ -5,10 +5,25 @@ fn is_valid(s: String) -> bool {
             '{' => count += 1,
             '}' if count == 0 => return false,
             '}' => count -= 1,
-            _ => panic!("Invalid char: {}", c),
+            _ => {}
         }
     }
     count == 0
+}
+
+#[test]
+fn is_valid_test2() {
+    let test_data = [
+        ("{}{}{{{}}{}}{}{}", true),
+        ("{}{}{{{}}{}}{}{}}", false),
+        ("{}{}{{{}}{}}{}{", false),
+        ("}{", false),
+        ("}{}{}{{{}}{}}{}{}", false),
+    ];
+
+    for (s, r) in test_data {
+        assert_eq!(is_valid(s.to_string()), r);
+    }
 }
 
 #[test]
