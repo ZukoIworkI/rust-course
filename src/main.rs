@@ -1,4 +1,3 @@
-
-
+mod CompoundTypes;
 
 fn main() {}
